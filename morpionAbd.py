@@ -67,7 +67,10 @@ def verifieGagnant(plateau, symbole):
 
 #### Vérifie si le plateau est plein ####
 def plateauComplet(plateau):
-    return " " not in plateau
+  for row in plateau:
+    if " " in row:
+      return False
+  return True  
 
 #### IA ####
 def IA(plateau, symbole):
